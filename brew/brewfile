@@ -1,0 +1,29 @@
+# install packages
+brew 'git'
+brew 'gh'
+brew 'imagemagick'
+brew 'jq'
+brew 'openssl'
+brew 'postgresql'
+brew 'rbenv'
+brew 'redis'
+brew 'tig'
+brew 'wget'
+brew 'yarn'
+
+# Casks
+cask 'iterm2'
+cask 'kap'
+cask 'postman'
+cask 'tableplus'
+cask 'vlc'
+cask 'visual-studio-code'
+cask 'warp'
+cask 'zoom'
+
+# Quick Look plugins
+cask 'qlcolorcode'
+cask 'qlimagesize'
+cask 'qlmarkdown'
+cask 'quicklook-csv'
+cask 'quicklook-json'
