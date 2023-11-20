@@ -31,7 +31,7 @@ $ cat ~/.ssh/id_ed25519.pub
 
 ```bash
 $ cd ~
-$ git clone git@github.com:maximepersonnic/dotfiles.git
+$ git clone git@github.com:ThomPouillevet/dotfiles.git
 $ cd dotfiles
 $ find ~/dotfiles -name '*.sh' | xargs -I file chmod u+x file
 ```
