@@ -41,25 +41,25 @@ find ~/dotfiles -name '*.sh' | xargs -I file chmod u+x file
 need to be connected to the apple store for mas installation
 
 ```bash
-brew/brew.sh
+sh brew/brew.sh
 ```
 
 ### Git
 
 ```bash
-git/git.sh
+sh git/git.sh
 ```
 
 ### ZSH
 
 ```bash
-zsh/zsh.sh
+sh zsh/zsh.sh
 ```
 
 ### Ruby
 
 ```bash
-ruby/rbenv.sh
+sh ruby/rbenv.sh
 ```
 
 ### SSH
