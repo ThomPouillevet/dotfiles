@@ -71,3 +71,8 @@ cp ssh/config ~/.ssh/config
 - Install GitLens VS Code extension
 - In the Settings, enable `git allow force push` and GitLens : Interactive Rebase Editor
 - set VS Code as your git editor: `git config --global core.editor "code --wait"`
+
+### Add Git lg alias (could be integrated in ~/.zshrc)
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
