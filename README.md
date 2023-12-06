@@ -61,9 +61,13 @@ sh zsh/zsh.sh
 ```bash
 sh ruby/rbenv.sh
 ```
-
 ### SSH
 
 ```bash
 cp ssh/config ~/.ssh/config
 ```
+
+### Enable interactive rebase in VS code
+- Install GitLens VS Code extension
+- In the Settings, enable `git allow force push` and GitLens : Interactive Rebase Editor
+- set VS Code as your git editor: `git config --global core.editor "code --wait"`
