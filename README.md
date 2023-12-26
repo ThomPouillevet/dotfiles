@@ -72,6 +72,22 @@ cp ssh/config ~/.ssh/config
 - In the Settings, enable `git allow force push` and GitLens : Interactive Rebase Editor
 - set VS Code as your git editor: `git config --global core.editor "code --wait"`
 
+## To setup the debugger on VSCode:
+- add alias
+```
+alias ovdebug='overmind start -f Procfile.dev -l sidekiq_worker,sidekiq_worker_test_scenarios,mailcatcher,webpack'
+```
+- Use this VSCode extension: ruby_LSP https://marketplace.visualstudio.com/items?itemName=Shopify.ruby-extensions-pack
+- in vscode in launch.json file, I have this config
+```
+{
+  "type": "ruby_lsp",
+  "name": "Debug",
+  "request": "launch",
+  "program": "bundle exec puma -C ./config/puma.rb -b 'tcp://127.0.0.1:3000' -b 'ssl://127.0.0.1:3001'"
+}
+```
+
 ### Add Git lg alias (could be integrated in ~/.zshrc)
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
