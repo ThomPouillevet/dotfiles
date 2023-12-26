@@ -92,3 +92,29 @@ alias ovdebug='overmind start -f Procfile.dev -l sidekiq_worker,sidekiq_worker_t
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
+### To setup the gems table_print and awesome_print without having to add them in your gemfile
+Create a ~/.pryrc file and in it:
+```
+$LOAD_PATH << "my_gem_path that I get with gem which awesome_print (you need to stop at the lib folder: foo/bar/lib/)"; nil
+
+begin
+  require 'awesome_print'
+  AwesomePrint.defaults = {
+    indent: -2, # left aligned
+    index: false
+    # more customization
+  }
+  # Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output) }
+rescue LoadError => err
+  puts "ℹ️ no awesome_print :("
+end
+
+$LOAD_PATH << "my_gem_path that I get with gem which table_print (you need to stop at the lib folder: foo/bar/lib/)"; nil
+
+begin
+  require 'table_print'
+rescue LoadError => err
+  puts "ℹ️ no table_print :("
+end
+
+```
