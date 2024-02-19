@@ -91,6 +91,8 @@ alias ovdebug='overmind start -f Procfile.dev -l sidekiq_worker,sidekiq_worker_t
 ### Add Git lg alias (could be integrated in ~/.zshrc)
 ```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+git config --global alias.routes "bin/rails routes | fzf -e"
 ```
 ### To setup the gems table_print and awesome_print without having to add them in your gemfile
 Create a ~/.pryrc file and in it:
