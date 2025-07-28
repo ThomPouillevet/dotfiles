@@ -1,0 +1,330 @@
+{
+  // ===== EDITOR APPEARANCE =====
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace", // Programming font with ligatures
+  "editor.fontSize": 12, // Base font size
+  "editor.fontLigatures": true, // Enable font ligatures (e.g., => becomes a single symbol)
+  "editor.lineHeight": 0, // Auto-calculate line height based on font
+  "editor.tabSize": 2, // Number of spaces per tab
+  "editor.insertSpaces": true, // Use spaces instead of tabs
+  "editor.rulers": [80, 120], // Vertical lines at 80 and 120 characters (coding standards)
+  "editor.wordWrap": "bounded", // Wrap text at ruler boundaries
+  "editor.minimap.enabled": false, // Disable the minimap (right sidebar preview)
+  "editor.minimap.maxColumn": 200, // Max columns shown in minimap (if enabled)
+  "editor.minimap.renderCharacters": false, // Don't render actual characters in minimap
+  "editor.minimap.showSlider": "always", // Always show minimap slider (if enabled)
+  "editor.bracketPairColorization.enabled": true, // Color-code matching brackets
+  "editor.guides.bracketPairs": true, // Show vertical lines for bracket pairs
+
+  // ===== EDITOR BEHAVIOR =====
+  "editor.suggestSelection": "first", // Select first suggestion by default
+  "editor.quickSuggestions": {
+    "other": true, // Show suggestions in code
+    "comments": false, // Don't show suggestions in comments
+    "strings": true // Show suggestions in strings
+  },
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": true, // Auto-format pasted code
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit", // Fix all auto-fixable issues on save
+    "source.organizeImports": "explicit" // Organize imports on save
+  },
+  // ===== FILE EXPLORER & SEARCH =====
+  "files.exclude": {
+    "**/.git": true, // Hide .git folder from file explorer
+    "**/.DS_Store": true, // Hide macOS system files
+    "**/node_modules": true, // Hide node_modules folder
+    "**/tmp": true, // Hide tmp folders
+    "**/log": true, // Hide log folders
+    "**/coverage": true // Hide test coverage folders
+  },
+  "search.exclude": {
+    "**/node_modules": true, // Exclude from search results
+    "**/bower_components": true, // Exclude bower components
+    "**/*.code-search": true, // Exclude code search files
+    "**/tmp": true, // Exclude tmp folders
+    "**/log": true, // Exclude log folders
+    "**/coverage": true // Exclude coverage folders
+  },
+  // ===== TERMINAL =====
+  "terminal.integrated.fontFamily": "Fira Code", // Terminal font
+  "terminal.integrated.fontSize": 14, // Terminal font size
+  "terminal.integrated.lineHeight": 1.2, // Terminal line spacing
+
+  // ===== WORKBENCH (UI) =====
+  "workbench.colorTheme": "Hyper Dracula", // Color theme
+  "workbench.iconTheme": "vscode-great-icons", // File/folder icons
+  "workbench.startupEditor": "none", // Don't show welcome page on startup
+  "workbench.editor.enablePreview": false, // Don't open files in preview mode
+  "workbench.editor.enablePreviewFromQuickOpen": false, // Don't preview from quick open
+  "workbench.sideBar.location": "right", // Move sidebar to right side
+  "workbench.activityBar.location": "hidden", // Hide the activity bar (left sidebar icons)
+  "workbench.statusBar.visible": false, // Hide the status bar at bottom
+  // ===== GIT INTEGRATION =====
+  "git.enableSmartCommit": true, // Allow committing all changes when no files are staged
+  "git.confirmSync": false, // Don't ask for confirmation on sync
+  "git.autofetch": true, // Automatically fetch from remote
+  "git.autofetchPeriod": 180, // Fetch every 3 minutes
+  "git.suggestSmartCommit": false, // Don't suggest smart commit
+  "git.allowForcePush": true, // Allow force push
+  // ===== EMMET (HTML/CSS SHORTHAND) =====
+  "emmet.includeLanguages": {
+    "erb": "html", // Enable Emmet in ERB files
+    "haml": "html" // Enable Emmet in HAML files
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "html" // Use HTML syntax in JS files
+  },
+  // ===== RUBY LANGUAGE SUPPORT =====
+  "ruby.useLanguageServer": true, // Enable Ruby Language Server for better IntelliSense
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true // Use Bundler to run RuboCop
+    },
+    "reek": {
+      "useBundler": true // Use Bundler to run Reek (code smell detector)
+    }
+  },
+  "ruby.format": "rubocop", // Use RuboCop for code formatting
+  "ruby.intellisense": "rubyLsp", // Use Ruby LSP for IntelliSense
+  "ruby.useBundler": true, // Use Bundler for Ruby tools
+  "ruby.locate": {
+    "include": [
+      "**/*.rb" // Include all Ruby files
+    ],
+    "exclude": [
+      "**/.git/**", // Exclude git files
+      "**/node_modules/**", // Exclude node modules
+      "**/.bundle/**" // Exclude bundle files
+    ]
+  },
+  // ===== FILE TYPE ASSOCIATIONS =====
+  "files.associations": {
+    "*.erb": "erb", // Treat ERB files as ERB
+    "*.haml": "haml", // Treat HAML files as HAML
+    "*.slim": "slim", // Treat Slim files as Slim
+    "*.js": "javascriptreact", // Treat JS files as React JS
+    "*.jsx": "javascriptreact", // Treat JSX files as React JS
+    "Gemfile": "ruby", // Treat Gemfile as Ruby
+    "Rakefile": "ruby", // Treat Rakefile as Ruby
+    "Guardfile": "ruby", // Treat Guardfile as Ruby
+    "Capfile": "ruby", // Treat Capfile as Ruby
+    "Vagrantfile": "ruby" // Treat Vagrantfile as Ruby
+  },
+  // ===== EXPLORER & NAVIGATION =====
+  "explorer.confirmDelete": false, // Don't ask for confirmation when deleting files
+  "explorer.confirmDragAndDrop": false, // Don't ask for confirmation on drag & drop
+  "breadcrumbs.enabled": true, // Show breadcrumb navigation
+  "breadcrumbs.showFiles": true, // Show file breadcrumbs
+  "breadcrumbs.showSymbols": true, // Show symbol breadcrumbs
+  "outline.showVariables": true, // Show variables in outline
+  "outline.showFunctions": true, // Show functions in outline
+  "outline.showClasses": true, // Show classes in outline
+  "outline.showModules": true, // Show modules in outline
+  "outline.showConstants": true, // Show constants in outline
+  "outline.showEnums": true, // Show enums in outline
+  "outline.showInterfaces": true, // Show interfaces in outline
+  "outline.showNamespaces": true, // Show namespaces in outline
+  "outline.showTypes": true, // Show types in outline
+  "outline.showTypeParameters": true, // Show type parameters in outline
+  "outline.showObjectLiteralMethods": true, // Show object literal methods in outline
+  // ===== TYPESCRIPT & JAVASCRIPT =====
+  "typescript.preferences.includePackageJsonAutoImports": "auto", // Auto-import from package.json
+  "typescript.suggest.autoImports": true, // Suggest auto-imports
+  "typescript.updateImportsOnFileMove.enabled": "always", // Update imports when moving files
+  "javascript.preferences.includePackageJsonAutoImports": "auto", // Auto-import from package.json
+  "javascript.suggest.autoImports": true, // Suggest auto-imports
+  // ===== EDITOR INTELLISENSE & SUGGESTIONS =====
+  "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+  "editor.inlineSuggest.enabled": true, // Show inline suggestions
+  "editor.parameterHints.enabled": true, // Show parameter hints
+  "editor.hover.enabled": true, // Show hover information
+  "editor.lightbulb.enabled": "off", // Disable lightbulb (code actions)
+  "editor.acceptSuggestionOnCommitCharacter": true, // Accept suggestions on commit characters
+  "editor.acceptSuggestionOnEnter": "off", // Don't accept suggestions on Enter
+  "editor.snippetSuggestions": "top", // Show snippets at top of suggestions
+  "editor.wordBasedSuggestions": "off", // Disable word-based suggestions
+  "editor.quickSuggestionsDelay": 10, // Delay for quick suggestions (ms)
+  "editor.tabCompletion": "on", // Enable tab completion
+  // ===== SUGGESTION TYPES TO SHOW =====
+  "editor.suggest.showKeywords": true, // Show language keywords
+  "editor.suggest.showSnippets": true, // Show code snippets
+  "editor.suggest.showClasses": true, // Show classes
+  "editor.suggest.showFunctions": true, // Show functions
+  "editor.suggest.showVariables": true, // Show variables
+  "editor.suggest.showModules": true, // Show modules
+  "editor.suggest.showProperties": true, // Show properties
+  "editor.suggest.showEvents": true, // Show events
+  "editor.suggest.showOperators": true, // Show operators
+  "editor.suggest.showUnits": true, // Show units
+  "editor.suggest.showValues": true, // Show values
+  "editor.suggest.showConstants": true, // Show constants
+  "editor.suggest.showEnums": true, // Show enums
+  "editor.suggest.showEnumMembers": true, // Show enum members
+  "editor.suggest.showColors": true, // Show colors
+  "editor.suggest.showFiles": true, // Show files
+  "editor.suggest.showReferences": true, // Show references
+  "editor.suggest.showFolders": true, // Show folders
+  "editor.suggest.showTypeParameters": true, // Show type parameters
+  "editor.suggest.showWords": true, // Show words
+  "editor.suggest.showUsers": true, // Show users
+  "editor.suggest.showIssues": true, // Show issues
+  "editor.suggest.showOther": true, // Show other suggestions
+
+  // ===== SUGGESTION BEHAVIOR =====
+  "editor.suggest.maxVisibleSuggestions": 12, // Max suggestions to show
+  "editor.suggest.filterGraceful": true, // Graceful filtering
+  "editor.suggest.localityBonus": true, // Prefer local suggestions
+  "editor.suggest.shareSuggestSelections": true, // Share selections across editors
+  "editor.suggest.showIcons": true, // Show suggestion icons
+  "editor.suggest.showStatusBar": true, // Show status bar info
+  "editor.suggest.showMethodSignatures": true, // Show method signatures
+  "editor.suggest.insertMode": "insert", // Insert mode for suggestions
+  "editor.suggest.filterType": "fuzzy", // Use fuzzy filtering
+  "editor.suggest.showDeprecated": false, // Don't show deprecated items
+  "editor.suggest.showCurrentParameterInSuggestionList": true, // Show current parameter
+
+  // ===== WINDOW & EDITOR APPEARANCE =====
+  "window.zoomLevel": -1, // Slightly zoom out the UI
+  "editor.accessibilitySupport": "off", // Disable accessibility support
+  "editor.trimAutoWhitespace": true, // Trim trailing whitespace
+  "editor.useTabStops": true, // Use tab stops for indentation
+  "editor.detectIndentation": false, // Don't auto-detect indentation
+  "editor.multiCursorModifier": "ctrlCmd", // Use Cmd/Ctrl for multi-cursor
+  "editor.matchBrackets": "never", // Don't highlight matching brackets
+  "editor.overviewRulerBorder": false, // Hide overview ruler border
+  "editor.renderLineHighlight": "none", // Don't highlight current line
+  "editor.gotoLocation.multipleReferences": "goto", // Go to first reference when multiple exist
+  "editor.gotoLocation.multipleDefinitions": "goto", // Go to first definition when multiple exist
+  "editor.gotoLocation.multipleDeclarations": "goto", // Go to first declaration when multiple exist
+  "editor.gotoLocation.multipleImplementations": "goto", // Go to first implementation when multiple exist
+  "editor.gotoLocation.multipleTypeDefinitions": "goto", // Go to first type definition when multiple exist
+  "editor.suggestFontSize": 15, // Font size for suggestions
+  "editor.suggestLineHeight": 28, // Line height for suggestions
+  "editor.inlineSuggest.showToolbar": "always", // Always show inline suggest toolbar
+  "editor.copyWithSyntaxHighlighting": false, // Don't copy with syntax highlighting
+  "editor.emptySelectionClipboard": false, // Don't copy empty selection
+  // ===== WINDOW & FILE BEHAVIOR =====
+  "window.nativeFullScreen": false, // Don't use native fullscreen
+  "window.commandCenter": false, // Disable command center
+  "window.newWindowDimensions": "inherit", // Inherit window dimensions
+  "files.hotExit": "off", // Don't restore unsaved files on restart
+  "files.trimTrailingWhitespace": true, // Trim trailing whitespace on save
+  "files.insertFinalNewline": true, // Add newline at end of files
+  "files.trimFinalNewlines": true, // Trim multiple newlines at end
+  "explorer.sortOrder": "mixed", // Mixed case sorting in explorer
+  "scm.diffDecorations": "none", // Hide SCM diff decorations
+  "workbench.tips.enabled": false, // Disable workbench tips
+  "workbench.editor.empty.hint": "hidden", // Hide empty editor hint
+  "security.workspace.trust.untrustedFiles": "open", // Open untrusted files
+  "security.promptForLocalFileProtocolHandling": false, // Don't prompt for local files
+  "diffEditor.codeLens": true, // Show code lens in diff editor
+  "diffEditor.ignoreTrimWhitespace": true, // Ignore whitespace in diffs
+  "notebook.kernelProviderAssociations": [], // No notebook kernel associations
+  "notebook.showFoldingControls": "always", // Always show notebook folding controls
+  "debug.console.fontSize": 13, // Debug console font size
+  "better-comments.multilineComments": true, // Enable multiline comments for Better Comments
+  "terminal.integrated.stickyScroll.enabled": true, // Enable sticky scroll in terminal
+  // ===== CURSOR AI SETTINGS =====
+  "cursor.cpp.disabledLanguages": [
+    "plaintext", // Disable Cursor AI for plaintext files
+    "scminput" // Disable Cursor AI for SCM input
+  ],
+
+  // ===== LANGUAGE-SPECIFIC FORMATTERS =====
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for HTML
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for JavaScript
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for React JS
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for JSON
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for JSONC
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for SCSS
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for TypeScript
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Use Prettier for React TS
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "LoranKloeze.ruby-rubocop-revived" // Use RuboCop for Ruby
+  },
+
+  // ===== PRETTIER SETTINGS =====
+  "prettier.jsxSingleQuote": true, // Use single quotes in JSX
+  "prettier.singleQuote": true, // Use single quotes in JavaScript
+
+  // ===== RUBY & RAILS SETTINGS =====
+  "ruby.rubocop.useServer": true, // Use RuboCop server for better performance
+  "ruby.rubocop.configFilePath": ".rubocop.yml", // Path to RuboCop config file
+  "rubyLsp.formatter": "rubocop", // Use RuboCop as Ruby LSP formatter
+  "railsI18n.languageIdentifiers": [
+    "ruby", // Ruby files
+    "erb", // ERB templates
+    "haml", // HAML templates
+    "slim", // Slim templates
+    "rb" // Ruby files
+  ],
+  "railsI18n.priorityOfLocales": [
+    "fr" // French as priority locale
+  ],
+  "vscode-run-rspec-file.custom-command": "bundle exec rspec --color --format documentation", // Custom RSpec command
+
+  // ===== TAILWIND CSS SETTINGS =====
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript", // Enable Tailwind in JS files
+    "html": "html", // Enable Tailwind in HTML files
+    "erb": "html" // Enable Tailwind in ERB files
+  },
+  "tailwindCSS.emmetCompletions": true, // Enable Emmet completions for Tailwind
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "class: ?[\"']([^\"']*)[\"']", // Match class attributes
+      "([a-zA-Z0-9\\-:]+)" // Extract class names
+    ],
+    [
+      "(\\.[\\w\\-.]+)[\\n\\=\\{\\s]", // Match CSS class selectors
+      "([\\w\\-]+)" // Extract class names
+    ]
+  ],
+
+
+  // ===== GITLENS SETTINGS =====
+  "gitlens.gitCommands.closeOnFocusOut": true, // Close Git commands when focus is lost
+  "gitlens.views.repositories.files.layout": "tree", // Use tree layout for GitLens views
+  "gitlens.rebaseEditor.ordering": "asc", // Ascending order in rebase editor
+
+  // ===== EXTENSION SETTINGS =====
+  "i18n-ally.annotations": false, // Disable i18n-ally annotations
+  "tabnine.experimentalAutoImports": true, // Enable TabNine auto-imports
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1" // Fig shell integration
+  },
+
+  // ===== CSS CLASSES COMPLETION =====
+  "cssClassesCompletion.classPrefix": "c-", // CSS class prefix
+  "cssClassesCompletion.utilitiesFilePath": "dist/utilities.css, node_modules/@drivy/cobalt/utilities.css", // Path to utilities CSS
+
+  // ===== ERROR LENS =====
+  "errorLens.decorations": {
+    "errorRange": {}, // Error decorations
+    "warningRange": {}, // Warning decorations
+    "infoRange": {}, // Info decorations
+    "hintRange": {} // Hint decorations
+  },
+
+  // Custom color customizations
+  "workbench.colorCustomizations": {
+    "scrollbar.shadow": "#f1d207",
+    "editorStickyScroll.background": "#000096"
+  }
+}

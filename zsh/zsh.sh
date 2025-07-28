@@ -1,47 +1,48 @@
 #!/usr/bin/env bash
 
-# install oh-my-zsh
+# ===== ZSH SETUP SCRIPT =====
+# This script installs and configures Oh-My-Zsh with plugins
+# optimized for Ruby on Rails development workflow
+
+echo "Setting up ZSH with Oh-My-Zsh..."
+
+# ===== INSTALL OH-MY-ZSH =====
+# Install Oh-My-Zsh if not already installed
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-backup() {
-  target=$1
-  if [ -e "$target" ]; then           # Does the config file already exist?
-    if [ ! -L "$target" ]; then       # as a pure file?
-      mv "$target" "$target.backup"   # Then backup it
-      echo "-----> Moved your old $target config file to $target.backup"
-    fi
-  fi
-}
-
-for name in *; do
-  if [ ! -d "$name" ]; then
-    target="$HOME/.$name"
-    if [[ ! "$name" =~ '\.sh$' ]] && [ "$name" != 'README.md' ] && [[ ! "$name" =~ '\.sublime-settings$' ]]; then
-      backup $target
-
-      if [ ! -e "$target" ]; then
-        echo "-----> Symlinking your new $target"
-        ln -s "$PWD/$name" "$target"
-      fi
-    fi
-  fi
-done
-
+# ===== COLOR DEFINITIONS =====
+# Define colors for output formatting
 REGULAR="\\033[0;39m"
 YELLOW="\\033[1;33m"
 GREEN="\\033[1;32m"
 
+# ===== INSTALL ZSH PLUGINS =====
+# Install additional ZSH plugins that enhance the development experience
 CURRENT_DIR=`pwd`
 ZSH_PLUGINS_DIR="$HOME/.oh-my-zsh/custom/plugins"
 mkdir -p "$ZSH_PLUGINS_DIR" && cd "$ZSH_PLUGINS_DIR"
+
+# Install zsh-syntax-highlighting for better command line experience
 if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
   echo "-----> Installing zsh plugin 'zsh-syntax-highlighting'..."
+  echo "       This plugin provides syntax highlighting for commands"
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 fi
+
 cd "$CURRENT_DIR"
 
-# Configuration files
+# ===== SYMLINK ZSH CONFIGURATION =====
+# Ensure the main .zshrc file is properly linked
 ln -fs ~/dotfiles/zsh/.zshrc ~/.zshrc
 
-# If you want to hide the last login banner on logging
-touch ~/.hushlogin
+echo "ZSH configuration complete!"
+echo "Your ZSH is now configured with:"
+echo "- Oh-My-Zsh framework"
+echo "- Development-focused plugins"
+echo "- Custom aliases and functions"
+echo "- Syntax highlighting"
+echo ""
+echo "Next steps:"
+echo "1. Restart your terminal or run: source ~/.zshrc"
+echo "2. Test your new configuration"
+echo "3. Customize plugins in ~/.zshrc if needed"
